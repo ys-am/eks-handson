@@ -22,12 +22,6 @@ variable "cluster_endpoint_public_access" {
   default     = false
 }
 
-variable "eks_managed_node_group_defaults" {
-  type        = map(any)
-  description = "ManagedNodeGroup Default InstanceType"
-  default     = { instance_types = ["m6i.large", "m5.large", "m5n.large", "m5zn.large"] }
-}
-
 variable "eks_managed_node_groups" {
   type        = map(any)
   description = "EKS ManagedNodeGroups"

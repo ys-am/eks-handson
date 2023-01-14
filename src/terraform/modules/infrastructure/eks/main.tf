@@ -17,13 +17,14 @@ module "eks" {
   cluster_enabled_log_types = var.cluster_enabled_log_types
 
   # EKS Managed Node Group(s)
-  eks_managed_node_group_defaults = var.eks_managed_node_group_defaults
+
 
   eks_managed_node_groups = var.eks_managed_node_groups
 
   # Fargate Profile(s)
   fargate_profiles = var.fargate_profiles
 
-  aws_auth_users = var.aws_auth_users
+  manage_aws_auth_configmap = true
+  aws_auth_users            = var.aws_auth_users
 
 }
