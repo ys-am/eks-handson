@@ -9,8 +9,7 @@ module "network" {
 
   name = "eks-vpc"
 
-  cidr = var.cidr
-
+  cidr            = var.cidr
   private_subnets = local.cidr_blocks[0]
   public_subnets  = local.cidr_blocks[1]
 }
