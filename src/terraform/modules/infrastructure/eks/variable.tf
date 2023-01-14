@@ -58,3 +58,19 @@ variable "control_plane_subnet_ids" {
   default     = []
 }
 
+variable "cluster_enabled_log_types" {
+  type = list(any)
+  default = [
+    "audit",
+    "api",
+    "authenticator",
+    "controllerManager",
+    "scheduler"
+  ]
+}
+
+variable "aws_auth_users" {
+  type        = list(any)
+  description = "List of user maps to add to the aws-auth configmap"
+  default     = []
+}
