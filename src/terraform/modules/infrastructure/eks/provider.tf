@@ -4,11 +4,11 @@ terraform {
       source  = "hashicorp/aws"
       version = "4.50.0"
     }
+    kubernetes = {
+      source  = "hashicorp/kubernetes"
+      version = "2.16.1"
+    }
   }
-}
-
-provider "aws" {
-  region = "ap-northeast-1"
 }
 
 provider "kubernetes" {
@@ -18,7 +18,7 @@ provider "kubernetes" {
   exec {
     api_version = "client.authentication.k8s.io/v1beta1"
     command     = "aws"
-    # This requires the awscli to be installed locally where Terraform is executed
+    #This requires the awscli to be installed locally where Terraform is executed
     args = ["eks", "get-token", "--cluster-name", module.eks.cluster_name]
   }
 }
