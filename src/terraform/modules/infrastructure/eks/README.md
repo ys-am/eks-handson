@@ -7,12 +7,14 @@
 |------|---------|
 | <a name="requirement_aws"></a> [aws](#requirement\_aws) | 4.50.0 |
 | <a name="requirement_kubernetes"></a> [kubernetes](#requirement\_kubernetes) | 2.16.1 |
+| <a name="requirement_local"></a> [local](#requirement\_local) | 2.3.0 |
 
 ## Providers
 
 | Name | Version |
 |------|---------|
 | <a name="provider_aws"></a> [aws](#provider\_aws) | 4.50.0 |
+| <a name="provider_local"></a> [local](#provider\_local) | 2.3.0 |
 
 ## Modules
 
@@ -25,6 +27,7 @@
 
 | Name | Type |
 |------|------|
+| [local_file.kubeconfig](https://registry.terraform.io/providers/hashicorp/local/2.3.0/docs/resources/file) | resource |
 | [aws_caller_identity.current](https://registry.terraform.io/providers/hashicorp/aws/4.50.0/docs/data-sources/caller_identity) | data source |
 
 ## Inputs

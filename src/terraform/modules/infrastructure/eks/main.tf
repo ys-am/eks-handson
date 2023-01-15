@@ -45,3 +45,12 @@ module "kms" {
 
   tags = local.tags
 }
+
+resource "local_file" "kubeconfig" {
+  sensitive_content = templatefile("${path.module}/kubeconfig.tpl", {
+    cluster_name = var.cluster_name,
+    clusterca    = module.eks.cluster_certificate_authority_data,
+    endpoint     = module.eks.cluster_endpoint,
+  })
+  filename = "./kubeconfig-${var.cluster_name}"
+}
