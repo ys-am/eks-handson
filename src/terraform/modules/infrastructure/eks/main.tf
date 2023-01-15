@@ -23,6 +23,7 @@ module "eks" {
   fargate_profiles = var.fargate_profiles
 
   manage_aws_auth_configmap = true
+  create_aws_auth_configmap = true
   aws_auth_users            = var.aws_auth_users
 
   create_kms_key = false

@@ -20,7 +20,7 @@ module "guardian" {
   source = "../../modules/infrastructure/eks"
 
   cluster_name    = "guardian"
-  cluster_version = "1.23"
+  cluster_version = "1.24"
 
   cluster_endpoint_public_access = true
 
