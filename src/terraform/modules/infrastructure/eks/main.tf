@@ -17,8 +17,6 @@ module "eks" {
   cluster_enabled_log_types = var.cluster_enabled_log_types
 
   # EKS Managed Node Group(s)
-
-
   eks_managed_node_groups = var.eks_managed_node_groups
 
   # Fargate Profile(s)
@@ -27,4 +25,22 @@ module "eks" {
   manage_aws_auth_configmap = true
   aws_auth_users            = var.aws_auth_users
 
+  create_kms_key = false
+  cluster_encryption_config = {
+    resources        = ["secrets"]
+    provider_key_arn = module.kms.key_arn
+  }
+  tags = local.tags
+}
+
+module "kms" {
+  source  = "terraform-aws-modules/kms/aws"
+  version = "1.1.0"
+
+  aliases               = ["eks/${var.cluster_name}"]
+  description           = "${var.cluster_name} cluster encryption key"
+  enable_default_policy = true
+  key_owners            = [data.aws_caller_identity.current.arn]
+
+  tags = local.tags
 }

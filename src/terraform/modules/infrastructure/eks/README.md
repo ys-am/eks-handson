@@ -3,21 +3,28 @@
 <!-- BEGINNING OF PRE-COMMIT-TERRAFORM DOCS HOOK -->
 ## Requirements
 
-No requirements.
+| Name | Version |
+|------|---------|
+| <a name="requirement_aws"></a> [aws](#requirement\_aws) | 4.50.0 |
 
 ## Providers
 
-No providers.
+| Name | Version |
+|------|---------|
+| <a name="provider_aws"></a> [aws](#provider\_aws) | 4.50.0 |
 
 ## Modules
 
 | Name | Source | Version |
 |------|--------|---------|
 | <a name="module_eks"></a> [eks](#module\_eks) | terraform-aws-modules/eks/aws | ~> 19.0 |
+| <a name="module_kms"></a> [kms](#module\_kms) | terraform-aws-modules/kms/aws | 1.1.0 |
 
 ## Resources
 
-No resources.
+| Name | Type |
+|------|------|
+| [aws_caller_identity.current](https://registry.terraform.io/providers/hashicorp/aws/4.50.0/docs/data-sources/caller_identity) | data source |
 
 ## Inputs
 
@@ -33,6 +40,7 @@ No resources.
 | <a name="input_eks_managed_node_groups"></a> [eks\_managed\_node\_groups](#input\_eks\_managed\_node\_groups) | EKS ManagedNodeGroups | `map(any)` | `{}` | no |
 | <a name="input_fargate_profiles"></a> [fargate\_profiles](#input\_fargate\_profiles) | Fargate Profile | `map(any)` | `{}` | no |
 | <a name="input_subnet_ids"></a> [subnet\_ids](#input\_subnet\_ids) | A list of subnet IDs where the nodes/node groups will be provisioned. If control\_plane\_subnet\_ids is not provided, the EKS cluster control plane (ENIs) will be provisioned in these subnets | `list(any)` | `[]` | no |
+| <a name="input_tags"></a> [tags](#input\_tags) | tag | `map(any)` | `{}` | no |
 | <a name="input_vpc_id"></a> [vpc\_id](#input\_vpc\_id) | VPCID | `string` | `""` | no |
 
 ## Outputs

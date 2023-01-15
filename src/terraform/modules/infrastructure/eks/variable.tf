@@ -68,3 +68,9 @@ variable "aws_auth_users" {
   description = "List of user maps to add to the aws-auth configmap"
   default     = []
 }
+
+variable "tags" {
+  type        = map(any)
+  description = "tag"
+  default     = {}
+}

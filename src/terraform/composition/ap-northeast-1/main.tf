@@ -1,7 +1,6 @@
-locals {
-  cidr_blocks = [for cidr_block in cidrsubnets("${var.cidr}", 8, 8, 8) : cidrsubnets(cidr_block, 4, 4, 4)]
-}
-
+#################################################
+# Network
+#################################################
 
 module "network" {
   source = "../../modules/infrastructure/network"
@@ -11,8 +10,12 @@ module "network" {
   cidr            = var.cidr
   private_subnets = local.cidr_blocks[0]
   public_subnets  = local.cidr_blocks[1]
+  intra_subnets   = local.cidr_blocks[2]
 }
 
+###############################################
+# Kubernetes
+###############################################
 module "guardian" {
   source = "../../modules/infrastructure/eks"
 

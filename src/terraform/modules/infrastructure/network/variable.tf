@@ -22,6 +22,12 @@ variable "public_subnets" {
   description = "Public Subnet"
 }
 
+variable "intra_subnets" {
+  type        = list(any)
+  default     = []
+  description = "Intra Subnet"
+}
+
 variable "azs" {
   type    = list(any)
   default = ["ap-northeast-1a", "ap-northeast-1c", "ap-northeast-1d"]
