@@ -28,7 +28,7 @@ No resources.
 |------|-------------|------|---------|:--------:|
 | <a name="input_AWS_ACCESS_KEY_ID"></a> [AWS\_ACCESS\_KEY\_ID](#input\_AWS\_ACCESS\_KEY\_ID) | n/a | `string` | n/a | yes |
 | <a name="input_AWS_SECRET_ACCESS_KEY"></a> [AWS\_SECRET\_ACCESS\_KEY](#input\_AWS\_SECRET\_ACCESS\_KEY) | n/a | `string` | n/a | yes |
-| <a name="input_cidr"></a> [cidr](#input\_cidr) | n/a | `string` | `"10.0.0.0/8"` | no |
+| <a name="input_cidr"></a> [cidr](#input\_cidr) | n/a | `string` | `"10.0.0.0/16"` | no |
 | <a name="input_userarn"></a> [userarn](#input\_userarn) | n/a | `string` | `"arn:aws:iam::66666666666:user/user1"` | no |
 | <a name="input_username"></a> [username](#input\_username) | n/a | `string` | `"user1"` | no |
 
