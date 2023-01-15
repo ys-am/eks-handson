@@ -74,3 +74,9 @@ variable "tags" {
   description = "tag"
   default     = {}
 }
+
+variable "region" {
+  type        = string
+  description = "AWS Region"
+  default     = "ap-northeast-1"
+}

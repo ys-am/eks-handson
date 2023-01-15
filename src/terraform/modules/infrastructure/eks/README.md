@@ -39,6 +39,7 @@
 | <a name="input_control_plane_subnet_ids"></a> [control\_plane\_subnet\_ids](#input\_control\_plane\_subnet\_ids) | A list of subnet IDs where the EKS cluster control plane (ENIs) will be provisioned. Used for expanding the pool of subnets used by nodes/node groups without replacing the EKS control plane | `list(any)` | `[]` | no |
 | <a name="input_eks_managed_node_groups"></a> [eks\_managed\_node\_groups](#input\_eks\_managed\_node\_groups) | EKS ManagedNodeGroups | `map(any)` | `{}` | no |
 | <a name="input_fargate_profiles"></a> [fargate\_profiles](#input\_fargate\_profiles) | Fargate Profile | `map(any)` | `{}` | no |
+| <a name="input_region"></a> [region](#input\_region) | AWS Region | `string` | `"ap-northeast-1"` | no |
 | <a name="input_subnet_ids"></a> [subnet\_ids](#input\_subnet\_ids) | A list of subnet IDs where the nodes/node groups will be provisioned. If control\_plane\_subnet\_ids is not provided, the EKS cluster control plane (ENIs) will be provisioned in these subnets | `list(any)` | `[]` | no |
 | <a name="input_tags"></a> [tags](#input\_tags) | tag | `map(any)` | `{}` | no |
 | <a name="input_vpc_id"></a> [vpc\_id](#input\_vpc\_id) | VPCID | `string` | `""` | no |
