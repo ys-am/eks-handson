@@ -12,13 +12,3 @@ variable "AWS_SECRET_ACCESS_KEY" {
   type      = string
   sensitive = true
 }
-
-variable "userarn" {
-  type    = string
-  default = "arn:aws:iam::66666666666:user/user1"
-}
-
-variable "username" {
-  type    = string
-  default = "user1"
-}

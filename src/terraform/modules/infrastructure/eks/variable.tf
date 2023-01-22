@@ -63,12 +63,6 @@ variable "cluster_enabled_log_types" {
   ]
 }
 
-variable "aws_auth_users" {
-  type        = list(any)
-  description = "List of user maps to add to the aws-auth configmap"
-  default     = []
-}
-
 variable "tags" {
   type        = map(any)
   description = "tag"

@@ -47,11 +47,4 @@ module "guardian" {
       capacity_type = "SPOT"
     }
   }
-  aws_auth_users = [
-    {
-      userarn  = var.userarn
-      username = var.username
-      groups   = ["system:masters"]
-    }
-  ]
 }
